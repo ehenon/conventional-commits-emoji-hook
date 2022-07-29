@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const commitMessage = fs.readFileSync(process.argv[2], 'utf8').trim();
+let emoji;
+
+if (commitMessage.startsWith('feat')) {
+	emoji = '✨';
+} else if (commitMessage.startsWith('fix')) {
+	emoji = '🐛';
+} else if (commitMessage.startsWith('build')) {
+	emoji = '🛠';
+} else if (commitMessage.startsWith('chore')) {
+	emoji = '🧹';
+} else if (commitMessage.startsWith('ci')) {
+	emoji = '⚙️';
+} else if (commitMessage.startsWith('docs')) {
+	emoji = '📚';
+} else if (commitMessage.startsWith('style')) {
+	emoji = '💎';
+} else if (commitMessage.startsWith('refactor')) {
+	emoji = '🔨';
+} else if (commitMessage.startsWith('perf')) {
+	emoji = '🚀';
+} else if (commitMessage.startsWith('test')) {
+	emoji = '🧪';
+} else if (commitMessage.startsWith('revert')) {
+	emoji = '🗑';
+} else {
+	emoji = '';
+}
+
+if (emoji)
+	fs.writeFileSync(process.argv[2], `${commitMessage} ${emoji}`);
+process.exit(0);
