@@ -1,6 +1,6 @@
 # Conventional Commits Emoji git hook
 
-`commit-msg` git hook written in JS to append to commit message an emoji corresponding to the specified conventional commit type.
+`commit-msg` git hook written in JS to append to commit message an emoji corresponding to the specified [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) type.
 
 Requirement: [Node.js](https://nodejs.org/en/)
 
@@ -8,7 +8,7 @@ Requirement: [Node.js](https://nodejs.org/en/)
 
 | Conventional Commit type | Related Emoji | Context |
 | ------------------------ | ------------- | ------- |
-| `feat`                   | ✨            | adds new functionality / improve something |
+| `feat`                   | ✨            | adds new functionality / improves something |
 | `test`                   | 🧪            | adds or updates unit tests |
 | `fix`                    | 🐛            | fixes a bug or issue |
 | `docs`                   | 📚            | adds or improves documentation |
